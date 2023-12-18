@@ -9,7 +9,7 @@ import Page7 from "./components/Page7";
 function App() {
   return (
     <>
-      <div className="MainBody flex items-start justify-center flex-col w-[100vw] bg-white ">
+      <div className="MainBody flex items-start justify-center flex-col w-full bg-white ">
         <Page1 />
         <Page2 />
         <Page3 />
