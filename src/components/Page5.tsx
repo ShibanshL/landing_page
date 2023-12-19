@@ -57,10 +57,25 @@ const Page5 = () => {
                      e.heading == "Professional"
                        ? ""
                        : "border-[1px] border-[#E5E7EB]"
-                   } pt-[40px] pb-[40px] pl-[24px] pr-[24px]
+                   } pt-[40px] pb-[40px] pl-[24px] pr-[24px] flex-wrap
                   `}
                 >
-                  <div className="h-[50%] w-full "></div>
+                  <div className="h-[50%] w-full ">
+                    <div className="h-[70%] w-full flex items-start justify-between flex-col bg-pink-300">
+                      <label className="font-semibold text-[22px]">
+                        {e.heading}
+                      </label>
+                      <p className="text-[14px]">{e.desc}</p>
+                      <h1 className="text-[56px] flex items-center justify-center">
+                        ${e.price} <span className="text-[14px]">/ Month</span>
+                      </h1>
+                    </div>
+                    <div className="h-[30%] w-full flex items-center justify-center bg-yellow-200">
+                      <button className="h-[44px] border-2 border-black w-[100%] rounded-md outline-none">
+                        Get Started Now
+                      </button>
+                    </div>
+                  </div>
                   <div className="h-[50%] w-full flex items-start justify-between flex-col bg-purple-300">
                     {constantCardData.map((e: string) => {
                       return (
