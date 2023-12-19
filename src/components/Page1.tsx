@@ -1,13 +1,22 @@
+import ZapierSVG from "../assets/zapier.svg";
+import spotifySVG from "../assets/spotify.svg";
+import zoomSVG from "../assets/zoom.svg";
+import slackSVG from "../assets/slack.svg";
+import amazonSVG from "../assets/amazon.svg";
+import adobeSVG from "../assets/adobe.svg";
+
+const imges = [ZapierSVG, spotifySVG, zoomSVG, slackSVG, amazonSVG, adobeSVG];
+
 const Page1 = () => {
   return (
     <>
-      <div className="Page1 flex items-center justify-center h-[100vh] w-full flex-col pr-[100px] pl-[100px]">
-        <div className="Navbar h-[15%] w-full flex items-center justify-center bg-pink-400">
+      <div className="Page1 flex items-center justify-center h-[100vh] w-full flex-col pr-[100px] pl-[100px] md:pl-[50px] md:pr-[50px]">
+        <div className="Navbar h-[15%] w-full flex items-center justify-center  ">
           <div className="w-[15%] h-full flex items-center justify-start">
             <h1 className="text-[24px] font-semibold">UniCraft</h1>
           </div>
           <div className="w-[70%] h-full flex items-center justify-center">
-            <div className="h-full w-[35%] flex items-center justify-between bg-pink-900">
+            <div className="h-full w-[35%] flex items-center justify-between ">
               <label className="">How it works</label>
               <label>Pricing</label>
               <label>FAQ</label>
@@ -19,7 +28,7 @@ const Page1 = () => {
             </button>
           </div>
         </div>
-        <div className="P1_Heading h-[65%] w-full bg-green-200 flex items-center justify-start flex-col">
+        <div className="P1_Heading h-[65%] md:h-[80%] w-full  flex items-center justify-start md:justify-center flex-col">
           <h1 className="text-[60px] text-center font-bold">
             Elevate Your Presence with<br></br> Seamless Design and Innovation.
           </h1>
@@ -31,15 +40,18 @@ const Page1 = () => {
             View Pricing
           </button>
         </div>
-        <div className="P1_Companies h-[20%] w-full bg-cyan-100 flex items-center justify-center flex-col">
+        <div className="P1_Companies h-[20%] w-[80%] flex items-center justify-center flex-col">
           <span>Trusted by 250+ Companies</span>
-          <div className="P1_Banner h-[80%] w-full flex items-center justify-between">
-            <div className="h-full w-[15%] bg-purple-200"></div>
-            <div className="h-full w-[15%] bg-purple-200"></div>
-            <div className="h-full w-[15%] bg-purple-200"></div>
-            <div className="h-full w-[15%] bg-purple-200"></div>
-            <div className="h-full w-[15%] bg-purple-200"></div>
-            <div className="h-full w-[15%] bg-purple-200"></div>
+          <div className="P1_Banner h-[80%] w-[80%] flex items-center justify-between flex-wrap">
+            {imges.map((e: any) => {
+              return (
+                <>
+                  <div className="h-full w-[100px] md:w-[120px] flex items-center justify-center">
+                    <img src={e} alt="" />
+                  </div>
+                </>
+              );
+            })}
           </div>
         </div>
       </div>

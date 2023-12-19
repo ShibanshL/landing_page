@@ -1,5 +1,6 @@
 import { useState } from "react";
 import tickSVG from "../assets/tick.svg";
+import tick_W_SVG from "../assets/tixk_w.svg";
 
 const constantCardData = [
   "20,000+ of PNG & SVG graphics",
@@ -32,24 +33,24 @@ const Page5 = () => {
   ]);
   return (
     <>
-      <div className="Page5 h-[160vh] w-full flex items-center justify-center flex-col bg-[rgb(253,252,255)] p-[100px]">
+      <div className="Page5 h-[160vh] md:h-[150vh] w-full flex items-center justify-center flex-col bg-[rgb(253,252,255)] p-[100px] md:p-[50px] ">
         <div className="P5_Text h-[20%] w-full flex items-center justify-center flex-col">
           <h1 className="text-[58px] text-center">
             Pricing made for collaborative support.
           </h1>
-          <div className="w-[60%] bg-orange-300">
+          <div className="w-[60%]">
             <p className="text-[20px] text-[#6B7280] text-center">
               Plain is made for your entire company. Only pay for users that
               actually message customers. Everyone else is free, forever.
             </p>
           </div>
         </div>
-        <div className="P5_Cards h-[80%] w-full flex items-center justify-between flex-wrap">
+        <div className="P5_Cards h-[80%] w-full flex flex-wrap items-center justify-between md:justify-evenly ">
           {cardData.map((e: any) => {
             return (
               <>
                 <div
-                  className={`h-[630px] w-[30%] ${
+                  className={`h-[630px] md:h-[730px] w-[409px] md:w-[410px] ${
                     e.heading == "Professional" ? "bg-[#1F2937]" : "bg-[#FFF]"
                   } rounded-lg 
                   ${e.heading == "Professional" ? "shadow-3xl" : ""}
@@ -57,32 +58,82 @@ const Page5 = () => {
                      e.heading == "Professional"
                        ? ""
                        : "border-[1px] border-[#E5E7EB]"
-                   } pt-[40px] pb-[40px] pl-[24px] pr-[24px] flex-wrap
+                   } pt-[40px] pb-[40px] pl-[24px] pr-[24px]
                   `}
                 >
                   <div className="h-[50%] w-full ">
-                    <div className="h-[70%] w-full flex items-start justify-between flex-col bg-pink-300">
-                      <label className="font-semibold text-[22px]">
+                    <div className="h-[70%] w-full flex items-start justify-between flex-col">
+                      <label
+                        className={`font-semibold text-[22px]  ${
+                          e.heading == "Professional"
+                            ? "text-white"
+                            : "text-black"
+                        }`}
+                      >
                         {e.heading}
                       </label>
-                      <p className="text-[14px]">{e.desc}</p>
-                      <h1 className="text-[56px] flex items-center justify-center">
-                        ${e.price} <span className="text-[14px]">/ Month</span>
+                      <p
+                        className={`text-[14px] ${
+                          e.heading == "Professional"
+                            ? "text-white"
+                            : "text-black"
+                        }`}
+                      >
+                        {e.desc}
+                      </p>
+                      <h1
+                        className={`text-[56px] flex items-center justify-center ${
+                          e.heading == "Professional"
+                            ? "text-white"
+                            : "text-black"
+                        }`}
+                      >
+                        ${e.price}{" "}
+                        <span
+                          className={`text-[14px] ${
+                            e.heading == "Professional"
+                              ? "text-white"
+                              : "text-black"
+                          }`}
+                        >
+                          / Month
+                        </span>
                       </h1>
                     </div>
-                    <div className="h-[30%] w-full flex items-center justify-center bg-yellow-200">
-                      <button className="h-[44px] border-2 border-black w-[100%] rounded-md outline-none">
+                    <div className="h-[30%] w-full flex items-center justify-center ">
+                      <button
+                        className={
+                          e.heading == "Professional"
+                            ? "h-[44px] bg-white text-[#1F2937] w-[100%] rounded-md outline-none font-medium"
+                            : "h-[44px] border-2 border-black w-[100%] rounded-md outline-none font-medium"
+                        }
+                      >
                         Get Started Now
                       </button>
                     </div>
                   </div>
-                  <div className="h-[50%] w-full flex items-start justify-between flex-col bg-purple-300">
-                    {constantCardData.map((e: string) => {
+                  <div className="h-[50%] w-full flex items-start justify-between flex-col pt-[15px]">
+                    {constantCardData.map((v: string) => {
                       return (
                         <>
                           <div className="flex items-start justify-between flex-row gap-[7px]">
-                            <img src={tickSVG} alt="" />
-                            <p className="text-[15px]">{e}</p>
+                            <img
+                              src={
+                                e.heading == "Professional"
+                                  ? tick_W_SVG
+                                  : tickSVG
+                              }
+                              alt=""
+                            />
+                            <p
+                              className={`text-[15px] ${
+                                e.heading == "Professional"
+                                  ? "text-white"
+                                  : "text-black"
+                              }`}
+                            >
+                              {v}
+                            </p>
                           </div>
                         </>
                       );

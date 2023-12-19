@@ -20,8 +20,8 @@ const Page3 = () => {
   ]);
   return (
     <>
-      <div className="Page3 h-[100vh] w-full flex items-center justify-center pl-[100px] pr-[100px] pt-[80px] pb-[80px]">
-        <div className="P3_Card h-full w-full rounded-2xl bg-purple-300 shadow-4xl">
+      <div className="Page3 h-[100vh] w-full flex items-center justify-center pl-[100px] pr-[100px] pt-[80px] pb-[80px] md:hidden">
+        <div className="P3_Card h-full w-full rounded-2xl  shadow-4xl">
           <div className="h-[30%] w-full flex items-center justify-center flex-col">
             <h1 className="text-[48px] font-semibold">How it works</h1>
             <p className="">
@@ -33,16 +33,20 @@ const Page3 = () => {
             {data.map((e: any) => {
               return (
                 <>
-                  <div className="h-full w-[33%] flex items-center justify-center relative bg-orange-700">
+                  <div className="h-full w-[33%] flex items-center justify-center relative ">
                     <div className="h-full w-full flex items-center justify-center relative z-[2]">
                       <div className="h-full w-full flex items-center justify-center">
-                        <h1 className="text-[200px] font-semibold">{e.id}</h1>
+                        <h1 className="text-[200px] font-semibold bg-gradient-to-b from-[#D8B4FE] to-[#FFF} text-transparent bg-clip-text">
+                          {e.id}
+                        </h1>
                       </div>
                       <div className="h-full w-full flex items-center justify-center flex-col absolute z-[1]">
                         <h1 className="text-[40px] font-semibold text-center mt-[80px]">
                           {e.heading}
                         </h1>
-                        <p className="text-[16px] text-center">{e.desc}</p>
+                        <p className="text-[14px] text-center text-[#6B7280] pl-[40px] pr-[40px]">
+                          {e.desc}
+                        </p>
                       </div>
                     </div>
                   </div>
@@ -50,8 +54,8 @@ const Page3 = () => {
               );
             })}
             <div className="h-full w-full flex items-center justify-evenly absolute z-[1] pl-[100px] pr-[100px]">
-              <img src={arrowSVG} alt="" />
-              <img src={arrowSVG} alt="" />
+              <img src={arrowSVG} alt="" className="mt-[-60px]" />
+              <img src={arrowSVG} alt="" className="mt-[-60px]" />
             </div>
           </div>
         </div>

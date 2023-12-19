@@ -5,10 +5,19 @@ import linkedinSVG from "../assets/linkedin.svg";
 import scissorsSVG from "../assets/scissors.svg";
 import basketballSVG from "../assets/basketball.svg";
 
+const logoList = [
+  twitterSVG,
+  facebookSVG,
+  githubSVG,
+  linkedinSVG,
+  scissorsSVG,
+  basketballSVG,
+];
+
 const Page7 = () => {
   return (
     <>
-      <div className="Page7 h-[100vh] w-full flex items-center justify-center flex-col bg-violet-200 pl-[100px] pr-[100px]">
+      <div className="Page7 h-[100vh] w-full flex items-center justify-center flex-col  pl-[100px] pr-[100px]">
         <div className="P7_Text h-[70%] w-full flex items-center justify-center flex-col">
           <h1 className="text-[72px] font-bold text-center">
             No long-term contracts.<br></br> No catches. Simple.
@@ -16,7 +25,9 @@ const Page7 = () => {
           <p className="text-[20px] text-[#667085]">
             Start your 30-day free trial. Cancel anytime.
           </p>
-          <button>Contact us</button>
+          <button className="h-[60px] w-[200px] mt-[30px] bg-[#1F2937] text-white rounded-md outline-none">
+            Contact us
+          </button>
         </div>
         <div className="P7_Footer h-[30%] w-full flex items-center justify-evenly flex-col border-t-[5px] border-t-gray-200">
           <div className="h-[20%] w-full flex items-center justify-start ">
@@ -30,17 +41,18 @@ const Page7 = () => {
           </div>
           <div className="h-[20%] w-full flex items-center justify-center ">
             <div className="h-full w-[75%] flex items-center justify-start">
-              <p className="text-[16px] text-[#9CA3AF]">
+              <p className="text-[16px] mt-[5px] text-[#9CA3AF]">
                 © 2077 Untitled UI. All rights reserved.
               </p>
             </div>
             <div className="h-full w-[25%] flex items-center justify-between">
-              <img src={twitterSVG} alt="" />
-              <img src={linkedinSVG} alt="" />
-              <img src={facebookSVG} alt="" />
-              <img src={githubSVG} alt="" />
-              <img src={scissorsSVG} alt="" />
-              <img src={basketballSVG} alt="" />
+              {logoList.map((e: any) => {
+                return (
+                  <>
+                    <img src={e} alt="" />
+                  </>
+                );
+              })}
             </div>
           </div>
         </div>

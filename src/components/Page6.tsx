@@ -48,7 +48,7 @@ const Page6 = () => {
 
   return (
     <>
-      <div className="Page6 h-[100vh] w-full flex items-center justify-center flex-col bg-cyan-200 pl-[100px] pr-[100px]">
+      <div className="Page6 h-[100vh] w-full flex items-center justify-center flex-col pl-[100px] pr-[100px]">
         <div className="P6_Heading h-[20%] w-full flex items-center justify-center flex-col">
           <h1 className="text-[58px]">Frequently asked questions</h1>
           <p className="text-[20px] text-[#667085]">
@@ -67,7 +67,7 @@ const Page6 = () => {
                     }
                   }}
                   className={` ${test ? "h-[100px]" : "h-[60px]"}
-            w-full flex items-start justify-start border-b-2 border-gray-300 bg-indigo-400 overflow-hidden transition-all`}
+            w-full flex items-start justify-start border-b-2 border-gray-300  overflow-hidden transition-all`}
                 >
                   <div className="min-h-full w-full flex items-center justify-start flex-col">
                     <div
