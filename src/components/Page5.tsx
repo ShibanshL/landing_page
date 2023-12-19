@@ -13,7 +13,7 @@ const constantCardData = [
 ];
 
 const Page5 = () => {
-  const [cardData, setCardData] = useState<any[]>([
+  const [cardData] = useState<any[]>([
     {
       heading: "Freebie",
       desc: "Ideal for individuals who need quick access to basic features.",
