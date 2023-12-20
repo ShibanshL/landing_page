@@ -10,7 +10,7 @@ const imges = [ZapierSVG, spotifySVG, zoomSVG, slackSVG, amazonSVG, adobeSVG];
 const Page1 = () => {
   return (
     <>
-      <div className="Page1 flex items-center justify-center h-[100vh] w-full flex-col pr-[100px] pl-[100px] md:pl-[50px] md:pr-[50px]">
+      <div className="Page1 flex items-center justify-center h-[100vh] w-full flex-col pr-[100px] pl-[100px] ">
         <div className="Navbar h-[15%] w-full flex items-center justify-center  ">
           <div className="w-[15%] h-full flex items-center justify-start">
             <h1 className="text-[24px] font-semibold">UniCraft</h1>
