@@ -48,14 +48,16 @@ const Page6 = () => {
 
   return (
     <>
-      <div className="Page6 h-[100vh] w-full flex items-center justify-center flex-col pl-[100px] pr-[100px]">
-        <div className="P6_Heading h-[20%] w-full flex items-center justify-center flex-col">
-          <h1 className="text-[58px]">Frequently asked questions</h1>
-          <p className="text-[20px] text-[#667085]">
+      <div className="Page6 h-[100vh] max-[1024px]:h-[70vh] max-[500px]:h-[100vh] w-full flex items-center justify-center  flex-col pl-[100px] pr-[100px] max-[1024px]:pl-[50px] max-[1024px]:pr-[50px] max-[500px]:pl-[20px] max-[500px]:pr-[20px]">
+        <div className="P6_Heading h-[20%] max-[1024px]:h-[30%] w-full flex items-center justify-center flex-col">
+          <h1 className="text-[58px] text-center font-semibold  max-[1024px]:text-[50px] max-[500px]:text-[30px]">
+            Frequently asked questions
+          </h1>
+          <p className="text-[20px] text-[#667085] text-center max-[500px]:text-[14px] max-[500px]:w-[80%]">
             Everything you need to know about the product and billing.
           </p>
         </div>
-        <div className="P6_Collapse h-[80%] w-[70%] flex items-center justify-center flex-col">
+        <div className="P6_Collapse h-[80%] max-[1024px]:h-[70%] w-[70%] max-[1024px]:w-[80%] max-[500px]:w-full flex items-center justify-center max-[1024px]:justify-start flex-col">
           {data.map((e: any, idx: number) => {
             return (
               <>
@@ -66,7 +68,9 @@ const Page6 = () => {
                       setTest(!test);
                     }
                   }}
-                  className={` ${test ? "h-[100px]" : "h-[60px]"}
+                  className={` ${test ? "h-[100px]" : "h-[60px]"} ${
+                    test ? "max-[500px]:h-[200px]" : "max-[500px]:h-[60px]"
+                  }
             w-full flex items-start justify-start border-b-2 border-gray-300  overflow-hidden transition-all`}
                 >
                   <div className="min-h-full w-full flex items-center justify-start flex-col">
@@ -82,7 +86,7 @@ const Page6 = () => {
                       />
                     </div>
                     <div className=" min-h-[80%] w-full flex items-center justify-between">
-                      <p>{e.answer}</p>
+                      <p className="max-[500px]:text-[12px]">{e.answer}</p>
                     </div>
                   </div>
                 </div>
