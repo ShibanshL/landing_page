@@ -9,7 +9,7 @@ const pngList = [png4, png1, png2, png3, png5];
 const Page2 = () => {
   return (
     <>
-      <div className="Page2 h-[100vh] w-full flex items-center justify-center flex-col">
+      <div className="Page2 h-[100vh] max-[1024px]:hidden w-full flex items-center justify-center flex-col">
         <div className="P2_Banner h-[70%] w-full flex items-center justify-center  overflow-hidden">
           <div className="h-full w-full flex items-center justify-between ">
             {pngList.map((e: any) => {

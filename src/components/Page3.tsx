@@ -20,7 +20,7 @@ const Page3 = () => {
   ]);
   return (
     <>
-      <div className="Page3 h-[100vh] w-full flex items-center justify-center pl-[100px] pr-[100px] pt-[80px] pb-[80px]">
+      <div className="Page3 h-[100vh] max-[1024px]:hidden w-full flex items-center justify-center pl-[100px] pr-[100px] pt-[80px] pb-[80px]">
         <div className="P3_Card h-full w-full rounded-2xl  shadow-4xl">
           <div className="h-[30%] w-full flex items-center justify-center flex-col">
             <h1 className="text-[48px] font-semibold">How it works</h1>

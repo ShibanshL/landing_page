@@ -33,7 +33,7 @@ const Page5 = () => {
   ]);
   return (
     <>
-      <div className="Page5 h-[160vh] md:h-[150vh] w-full flex items-center justify-center flex-col bg-[rgb(253,252,255)] p-[100px] md:p-[50px] ">
+      <div className="Page5 h-[160vh] max-[1024px]:h-[155vh] w-full flex items-center justify-center flex-col bg-[rgb(253,252,255)] p-[100px] max-[1024px]:p-[50px]">
         <div className="P5_Text h-[20%] w-full flex items-center justify-center flex-col">
           <h1 className="text-[58px] text-center">
             Pricing made for collaborative support.
@@ -45,12 +45,12 @@ const Page5 = () => {
             </p>
           </div>
         </div>
-        <div className="P5_Cards h-[80%] w-full flex flex-wrap items-center justify-between md:justify-evenly ">
+        <div className="P5_Cards h-[80%] w-full flex flex-wrap items-center justify-between max-[1024px]:justify-center">
           {cardData.map((e: any) => {
             return (
               <>
                 <div
-                  className={`h-[630px] md:h-[730px] w-[409px] md:w-[410px] ${
+                  className={`h-[630px] w-[30%] max-[1024px]:w-[350px] max-[1024px]:h-[600px] ${
                     e.heading == "Professional" ? "bg-[#1F2937]" : "bg-[#FFF]"
                   } rounded-lg 
                   ${e.heading == "Professional" ? "shadow-3xl" : ""}

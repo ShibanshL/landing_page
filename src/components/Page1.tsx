@@ -11,7 +11,7 @@ const Page1 = () => {
   return (
     <>
       <div className="Page1 flex items-center justify-center h-[100vh] w-full flex-col pr-[100px] pl-[100px] ">
-        <div className="Navbar h-[15%] w-full flex items-center justify-center  ">
+        <div className="Navbar h-[15%] w-full flex items-center justify-center max-[1024px]:hidden ">
           <div className="w-[15%] h-full flex items-center justify-start">
             <h1 className="text-[24px] font-semibold">UniCraft</h1>
           </div>
@@ -28,7 +28,7 @@ const Page1 = () => {
             </button>
           </div>
         </div>
-        <div className="P1_Heading h-[65%] md:h-[80%] w-full  flex items-center justify-start md:justify-center flex-col">
+        <div className="P1_Heading h-[65%] max-[1024px]:h-[80%] w-full  flex items-center justify-start md:justify-center flex-col">
           <h1 className="text-[60px] text-center font-bold">
             Elevate Your Presence with<br></br> Seamless Design and Innovation.
           </h1>
@@ -46,7 +46,7 @@ const Page1 = () => {
             {imges.map((e: any) => {
               return (
                 <>
-                  <div className="h-full w-[100px] md:w-[120px] flex items-center justify-center">
+                  <div className="h-full w-[100px] max-[1024px]:w-[120px] flex items-center justify-center">
                     <img src={e} alt="" />
                   </div>
                 </>

@@ -4,7 +4,7 @@ import avatarSVG from "../assets/Avatar.svg";
 const Page4 = () => {
   return (
     <>
-      <div className="Page4 h-[100vh] w-full flex items-center justify-center">
+      <div className="Page4 h-[100vh] max-[1024px]:hidden w-full flex items-center justify-center">
         <div className="P4_Card h-[75%] w-full flex items-center justify-center flex-col bg-[#F9FAFB]  pl-[100px] pr-[100px]">
           <div className="P4_Comment h-[60%] w-full flex items-center justify-end flex-col pb-[50px]">
             <img src={CompanyLogo} alt="" />
