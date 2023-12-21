@@ -33,7 +33,7 @@ const Page5 = () => {
   ]);
   return (
     <>
-      <div className="Page5 h-[160vh] max-[1024px]:h-[135vh] max-[500px]:h-[260vh] max-[400px]:h-[330vh] max-[768px]:h-[140vh] w-full flex items-center justify-center flex-col bg-[rgb(253,252,255)] p-[100px] max-[1024px]:p-[50px] max-[500px]:pl-[20px] max-[500px]:pr-[20px]">
+      <div className="Page5 h-[160vh] max-[1024px]:h-[135vh] max-[500px]:h-[260vh] max-[400px]:h-[330vh] max-[768px]:h-[140vh] w-full flex items-center justify-center flex-col bg-[rgba(255,255,255,0.05)] p-[100px] max-[1024px]:p-[50px] max-[500px]:pl-[20px] max-[500px]:pr-[20px]">
         <div className="P5_Text h-[20%]  max-[500px]:h-[10%] w-full flex items-center justify-center flex-col">
           <h1 className="text-[58px] text-center font-semibold  max-[1024px]:text-[50px] max-[500px]:text-[30px]">
             Pricing made for collaborative support.

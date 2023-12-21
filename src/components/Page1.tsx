@@ -4,6 +4,7 @@ import zoomSVG from "../assets/zoom.svg";
 import slackSVG from "../assets/slack.svg";
 import amazonSVG from "../assets/amazon.svg";
 import adobeSVG from "../assets/adobe.svg";
+import "./bg.css";
 
 const imges = [ZapierSVG, spotifySVG, zoomSVG, slackSVG, amazonSVG, adobeSVG];
 

@@ -70,7 +70,9 @@ const Page6 = () => {
                       ? "max-[500px]:h-[120px]"
                       : "max-[500px]:h-[60px]"
                   }
-            w-full flex items-start justify-start border-b-2 border-gray-300  overflow-hidden transition-all p-[10px]`}
+            w-full flex items-start justify-start border-b-2 ${
+              e.id !== 6 ? "border-gray-300" : "border-none"
+            }  overflow-hidden transition-all p-[10px]`}
                 >
                   <div className="min-h-full w-full flex items-center justify-start flex-col">
                     <div
@@ -78,9 +80,7 @@ const Page6 = () => {
                         idx != num - 1 ? "pb-[100px]" : "pb-[0px]"
                       }`}
                     >
-                      <label>
-                        {e.question} {num - 1}
-                      </label>
+                      <label>{e.question}</label>
                       <img
                         src={
                           idx == num - 1 ? CollapseOpenSVG : CollapseCloseSVG

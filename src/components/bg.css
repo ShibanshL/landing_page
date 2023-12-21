@@ -1,0 +1,7 @@
+.Page1 {
+  background: linear-gradient(0deg, #fff 32.26%, rgba(255, 255, 255, 0) 79.75%);
+}
+
+.Page7 {
+  background: url("../assets/pngs/imgB.png"), lightgray 50% / cover no-repeat;
+}

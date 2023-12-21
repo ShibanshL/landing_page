@@ -4,7 +4,7 @@ import githubSVG from "../assets/github.svg";
 import linkedinSVG from "../assets/linkedin.svg";
 import scissorsSVG from "../assets/scissors.svg";
 import basketballSVG from "../assets/basketball.svg";
-
+import "./bg.css";
 const logoList = [
   twitterSVG,
   facebookSVG,
@@ -17,12 +17,9 @@ const logoList = [
 const Page7 = () => {
   return (
     <>
-      <div
-        // style={{ backgroundImage: "url(../assets/pngs/imgB.png)" }}
-        className="Page7 h-[100vh] max-[1024px]:h-[50vh] max-[500px]:h-[100vh] w-full flex items-center justify-center flex-col pl-[100px] pr-[100px] max-[1024px]:pl-[50px] max-[1024px]:pr-[50px] max-[500px]:pl-[20px] max-[500px]:pr-[20px]"
-      >
+      <div className="Page7 h-[100vh] max-[1024px]:h-[50vh] max-[500px]:h-[100vh] w-full flex items-center justify-center flex-col pl-[100px] pr-[100px] max-[1024px]:pl-[50px] max-[1024px]:pr-[50px] max-[500px]:pl-[20px] max-[500px]:pr-[20px]">
         <div className="P7_Text h-[70%] w-full flex items-center justify-center flex-col">
-          <h1 className="text-[72px] max-[1024px]:text-[52px] font-bold text-center max-[500px]:text-[30px]">
+          <h1 className="text-[55px] max-[1024px]:text-[52px] font-bold text-center max-[500px]:text-[30px]">
             No long-term contracts.<br></br> No catches. Simple.
           </h1>
           <p className="text-[20px] text-[#667085] max-[1024px]:text-[15px] max-[1024px]:mt-[10px] text-center">
