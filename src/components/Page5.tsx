@@ -13,6 +13,7 @@ const constantCardData = [
   "Create teams to collaborate on designs",
 ];
 
+//interface for the cards data type displayed here
 interface cardDataType_P5 {
   heading: string;
   desc: string;
@@ -38,6 +39,8 @@ const Page5 = () => {
     },
   ]);
 
+  //this function checks pricing cards and based on which card it is, it decrease opacity of
+  //features based on pay model
   const checkOpacity = (e: string, idx: number) => {
     if (e == "Freebie") {
       if (idx > 1) {

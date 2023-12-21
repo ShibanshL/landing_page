@@ -2,6 +2,7 @@ import { useState } from "react";
 import CollapseOpenSVG from "../assets/collapseOpen.svg";
 import CollapseCloseSVG from "../assets/collapseClose.svg";
 
+//interface for the collapse menu data type displayed here
 interface cardDataType_P6 {
   id: number;
   question: string;

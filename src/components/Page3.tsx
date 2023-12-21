@@ -1,6 +1,7 @@
 import { useState } from "react";
 import arrowSVG from "../assets/arrow.svg";
 
+//interface for the cards data type displayed here
 interface cardDataType_P2 {
   id: number;
   heading: string;
