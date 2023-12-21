@@ -37,7 +37,7 @@ const Page3 = () => {
             </p>
           </div>
           <div className="h-[70%] w-full flex items-center justify-center pl-[20px] pr-[20px]">
-            {data.map((e: any) => {
+            {data.map((e: cardDataType_P2) => {
               return (
                 <>
                   <div className="h-full w-[33%] flex items-center justify-center relative ">

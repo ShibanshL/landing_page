@@ -58,7 +58,7 @@ const Page6 = () => {
           </p>
         </div>
         <div className="P6_Collapse h-[80%] max-[1024px]:h-[70%] w-[70%] max-[1024px]:w-[80%] max-[500px]:w-full flex items-center justify-center max-[1024px]:justify-start flex-col">
-          {data.map((e: any, idx: number) => {
+          {data.map((e: cardDataType_P6, idx: number) => {
             return (
               <>
                 <div

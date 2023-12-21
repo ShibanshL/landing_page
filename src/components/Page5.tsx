@@ -66,7 +66,7 @@ const Page5 = () => {
           </div>
         </div>
         <div className="P5_Cards h-[80%] max-[500px]:h-[90%] w-full flex flex-wrap items-center justify-between max-[1024px]:justify-evenly">
-          {cardData.map((e: any) => {
+          {cardData.map((e: cardDataType_P5) => {
             return (
               <>
                 <div
