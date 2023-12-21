@@ -13,8 +13,14 @@ const constantCardData = [
   "Create teams to collaborate on designs",
 ];
 
+interface cardDataType_P5 {
+  heading: string;
+  desc: string;
+  price: number;
+}
+
 const Page5 = () => {
-  const [cardData] = useState<any[]>([
+  const [cardData] = useState<cardDataType_P5[]>([
     {
       heading: "Freebie",
       desc: "Ideal for individuals who need quick access to basic features.",
@@ -31,6 +37,20 @@ const Page5 = () => {
       price: 100,
     },
   ]);
+
+  const checkOpacity = (e: string, idx: number) => {
+    if (e == "Freebie") {
+      if (idx > 1) {
+        return " opacity-[25%]";
+      }
+    }
+    if (e == "Professional") {
+      if (idx > 4) {
+        return " opacity-[25%]";
+      }
+    }
+  };
+
   return (
     <>
       <div className="Page5 h-[160vh] max-[1024px]:h-[135vh] max-[500px]:h-[260vh] max-[400px]:h-[330vh] max-[768px]:h-[140vh] w-full flex items-center justify-center flex-col bg-[rgba(255,255,255,0.05)] p-[100px] max-[1024px]:p-[50px] max-[500px]:pl-[20px] max-[500px]:pr-[20px]">
@@ -50,7 +70,7 @@ const Page5 = () => {
             return (
               <>
                 <div
-                  className={`h-[630px] w-[30%] max-[1024px]:w-[380px] max-[1024px]:h-[680px] max-[768px]:w-[280px] max-[768px]:h-[500px] max-[500px]:h-[650px] max-[500px]:w-full ${
+                  className={`h-[630px] w-[30%] max-[1024px]:w-[380px] max-[1024px]:h-[680px] max-[768px]:w-[280px] max-[768px]:h-[500px] max-[820px]:w-[350px] max-[820px]:h-[580px] max-[500px]:h-[650px] max-[500px]:w-full ${
                     e.heading == "Professional" ? "bg-[#1F2937]" : "bg-[#FFF]"
                   } rounded-lg 
                   ${e.heading == "Professional" ? "shadow-3xl" : ""}
@@ -113,10 +133,15 @@ const Page5 = () => {
                     </div>
                   </div>
                   <div className="h-[50%] w-full flex items-start justify-between flex-col pt-[15px]">
-                    {constantCardData.map((v: string) => {
+                    {constantCardData.map((v: string, idx: number) => {
                       return (
                         <>
-                          <div className="flex items-start justify-between flex-row gap-[7px]">
+                          <div
+                            className={`flex items-start justify-between flex-row gap-[7px] ${checkOpacity(
+                              e.heading,
+                              idx
+                            )}`}
+                          >
                             <img
                               src={
                                 e.heading == "Professional"

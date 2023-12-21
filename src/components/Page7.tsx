@@ -17,7 +17,7 @@ const logoList = [
 const Page7 = () => {
   return (
     <>
-      <div className="Page7 h-[100vh] max-[1024px]:h-[50vh] max-[500px]:h-[100vh] w-full flex items-center justify-center flex-col pl-[100px] pr-[100px] max-[1024px]:pl-[50px] max-[1024px]:pr-[50px] max-[500px]:pl-[20px] max-[500px]:pr-[20px]">
+      <div className="Page7 bg-no-repeat bg-cover h-[100vh] max-[1024px]:h-[50vh] max-[500px]:h-[100vh] w-full flex items-center justify-center flex-col pl-[100px] pr-[100px] max-[1024px]:pl-[50px] max-[1024px]:pr-[50px] max-[500px]:pl-[20px] max-[500px]:pr-[20px]">
         <div className="P7_Text h-[70%] w-full flex items-center justify-center flex-col">
           <h1 className="text-[55px] max-[1024px]:text-[52px] font-bold text-center max-[500px]:text-[30px]">
             No long-term contracts.<br></br> No catches. Simple.

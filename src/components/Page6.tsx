@@ -2,45 +2,45 @@ import { useState } from "react";
 import CollapseOpenSVG from "../assets/collapseOpen.svg";
 import CollapseCloseSVG from "../assets/collapseClose.svg";
 
+interface cardDataType_P6 {
+  id: number;
+  question: string;
+  answer: string;
+}
+
 const Page6 = () => {
   const [num, setNum] = useState(0);
-  const [data] = useState<any>([
+  const [data] = useState<cardDataType_P6[]>([
     {
       id: 1,
-      open: false,
       question: "Is there a free trial available?",
       answer:
         "Yes, you can try us for free for 30 days. If you want, we'll provide you with a free, personalized 30-minute onboarding call to get you up and running as soon as possible.",
     },
     {
       id: 2,
-      open: false,
       question: "Can I change my plan later?",
       answer: "Yes, if you pay us in advance for that.",
     },
     {
       id: 3,
-      open: false,
       question: "What is your cancellation policy?",
       answer:
         "You have to cancel within one day and only upto 60% is refundable within the timeframe.",
     },
     {
       id: 4,
-      open: false,
       question: "Can other info be added to an invoice?",
       answer: "Yes, but to avail such service you have to pay us extra.",
     },
     {
       id: 5,
-      open: false,
       question: "How does billing work?",
       answer:
         "We give you a number and you pay with cash, online transfer, UPI, Crypto, assets.",
     },
     {
       id: 6,
-      open: false,
       question: "How do I change my account email?",
       answer: "By paying us extra for such correction services.",
     },

@@ -1,7 +1,14 @@
 import { useState } from "react";
 import arrowSVG from "../assets/arrow.svg";
+
+interface cardDataType_P2 {
+  id: number;
+  heading: string;
+  desc: string;
+}
+
 const Page3 = () => {
-  const [data] = useState<any[]>([
+  const [data] = useState<cardDataType_P2[]>([
     {
       id: 1,
       heading: "Subscribe",
