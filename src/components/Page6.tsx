@@ -3,14 +3,14 @@ import CollapseOpenSVG from "../assets/collapseOpen.svg";
 import CollapseCloseSVG from "../assets/collapseClose.svg";
 
 const Page6 = () => {
-  const [test, setTest] = useState(false);
+  const [num, setNum] = useState(0);
   const [data] = useState<any>([
     {
       id: 1,
       open: false,
       question: "Is there a free trial available?",
       answer:
-        "Yes, you can try us for free for 30 days. If you want, we’ll provide you with a free, personalized 30-minute onboarding call to get you up and running as soon as possible.",
+        "Yes, you can try us for free for 30 days. If you want, we'll provide you with a free, personalized 30-minute onboarding call to get you up and running as soon as possible.",
     },
     {
       id: 2,
@@ -23,7 +23,7 @@ const Page6 = () => {
       open: false,
       question: "What is your cancellation policy?",
       answer:
-        "You have to cancell within one day and only upto 60% is refundable within the timeframe",
+        "You have to cancel within one day and only upto 60% is refundable within the timeframe.",
     },
     {
       id: 4,
@@ -36,13 +36,13 @@ const Page6 = () => {
       open: false,
       question: "How does billing work?",
       answer:
-        "We give you a number and you pay with cash, online transfer, UPI, Crypto, assets",
+        "We give you a number and you pay with cash, online transfer, UPI, Crypto, assets.",
     },
     {
       id: 6,
       open: false,
       question: "How do I change my account email?",
-      answer: "By paying us extra for such correction services",
+      answer: "By paying us extra for such correction services.",
     },
   ]);
 
@@ -63,30 +63,39 @@ const Page6 = () => {
               <>
                 <div
                   onClick={() => {
-                    console.log(idx, "&&", e.id - 1);
-                    if (idx == e.id - 1) {
-                      setTest(!test);
-                    }
+                    setNum(e.id);
                   }}
-                  className={` ${test ? "h-[100px]" : "h-[60px]"} ${
-                    test ? "max-[500px]:h-[200px]" : "max-[500px]:h-[60px]"
+                  className={` ${idx == num - 1 ? "h-[100px]" : "h-[60px]"} ${
+                    idx == num - 1
+                      ? "max-[500px]:h-[120px]"
+                      : "max-[500px]:h-[60px]"
                   }
-            w-full flex items-start justify-start border-b-2 border-gray-300  overflow-hidden transition-all`}
+            w-full flex items-start justify-start border-b-2 border-gray-300  overflow-hidden transition-all p-[10px]`}
                 >
                   <div className="min-h-full w-full flex items-center justify-start flex-col">
                     <div
                       className={`min-h-[20%] w-full flex items-center justify-between transition-all ${
-                        !test ? "pb-[100px]" : "pb-[0px]"
+                        idx != num - 1 ? "pb-[100px]" : "pb-[0px]"
                       }`}
                     >
-                      <label>{e.question}</label>
+                      <label>
+                        {e.question} {num - 1}
+                      </label>
                       <img
-                        src={test ? CollapseOpenSVG : CollapseCloseSVG}
+                        src={
+                          idx == num - 1 ? CollapseOpenSVG : CollapseCloseSVG
+                        }
                         alt=""
                       />
                     </div>
                     <div className=" min-h-[80%] w-full flex items-center justify-between">
-                      <p className="max-[500px]:text-[12px]">{e.answer}</p>
+                      <p
+                        className={`max-[500px]:text-[12px] text-[12px] ${
+                          idx == num - 1 ? "pb-[20px]" : "pb-[0px]"
+                        }`}
+                      >
+                        {e.answer}
+                      </p>
                     </div>
                   </div>
                 </div>
